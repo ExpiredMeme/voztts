@@ -1,8 +1,8 @@
-Voz minimal website — flat dark blue background and GUI logo.
+Voz website — features page update
 
-Upload all files and folders from this ZIP to the root of your GitHub website repository.
+- Uses the attached Voz .ico for the favicon and top-left logo on every page.
+- Features page contains eight cards in two columns on desktop and one on mobile.
+- Homepage, guide, dark flat background and update manifest preserved.
+- Download and purchase links remain intentionally inactive until configured.
 
-Homepage: Voz logo top-left, Features and Guide navigation, simple buttons.
-The five screenshot backgrounds and slideshow code have been removed.
-The installer and licence buttons remain disabled until you provide release/payment URLs.
-The updates/latest.json placeholder is preserved.
+Upload the contents of this folder to the root of your GitHub website repository, replacing files with the same names. Include the assets and updates folders. Cloudflare will redeploy after the commit.
