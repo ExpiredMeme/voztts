@@ -1,9 +1,8 @@
-Voz website — features and privacy update
+Voz website — Guide sections 1 and 2 updated.
 
-- Eight original feature cards preserved in two columns, with a ninth Privacy card spanning both columns.
-- Person-speaking icon for Custom AI voices.
-- Sound effect punctuation and Web Search (Experimental) updated.
-- Original uploaded Voz logo remains on all pages; flat dark-blue background preserved.
-- Privacy copy is user-supplied; verify absolute claims about saving/access against application, Discord, and any service logging before public release.
+Upload the contents of this ZIP to the root of the GitHub repository, including assets/.
+Sections 3–6, Home, Features, logo, and update manifest are unchanged.
+Sections 1 and 2 have the requested instructions, hyperlink, and two screenshots in order.
+Download and purchase links remain disabled until release.
 
-Upload the extracted contents to the root of the GitHub website repository.
+Security note: Never publish a bot token. Avoid saving tokens in unencrypted notes; enter them directly into Voz if possible.
