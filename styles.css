@@ -50,3 +50,17 @@ body,body.homepage{background:#0e1223}
 .guide-figure{margin:12px 0 4px;width:100%;max-width:100%}
 .guide-figure img{display:block;width:100%;height:auto;border:1px solid #34406a;border-radius:8px;background:#232532}
 .guide-figure figcaption{margin-top:7px;font-size:12px;color:#8d9abf}
+
+/* Expandable screenshots */
+.guide-figure img{cursor:zoom-in;transition:border-color .15s ease}
+.guide-figure img:hover,.guide-figure img:focus{border-color:#85b8ff;outline-offset:3px}
+.screenshot-viewer{position:fixed;inset:3vh 3vw;width:94vw;max-width:none;height:94vh;max-height:none;margin:auto;padding:0;background:#101529;color:#e9edff;border:1px solid #44517d;border-radius:12px;overflow:hidden}
+.screenshot-viewer::backdrop{background:rgba(0,0,0,.85)}
+.viewer-toolbar{height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 14px;background:#191e36;border-bottom:1px solid #34406a;font-size:13px}
+.viewer-toolbar #viewer-caption{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.viewer-actions{display:flex;gap:6px;flex-shrink:0}
+.viewer-actions button{background:#2b4ac3;color:white;border:0;border-radius:6px;padding:7px 12px;cursor:pointer;font:inherit}
+.viewer-actions button:hover{background:#3d5bdb}
+.viewer-scroll{height:calc(100% - 54px);overflow:auto;text-align:center;padding:16px}
+.viewer-scroll img{display:block;width:auto;max-width:none;height:auto;margin:0 auto;box-shadow:0 6px 25px #0007}
+@media(max-width:650px){.screenshot-viewer{inset:1vh 1vw;width:98vw;height:98vh}.viewer-toolbar{padding:6px}.viewer-actions button{padding:6px 9px}.viewer-toolbar #viewer-caption{font-size:11px}}
