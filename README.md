@@ -1,32 +1,28 @@
-# Voz website — Cloudflare Pages starter
+# Voz website — minimal design
 
-A static site ready for GitHub-connected Cloudflare Pages.
+Static website for Cloudflare Workers static assets or Cloudflare Pages. No build tools required.
 
 ## Deploy
 
-1. Extract this ZIP.
-2. In your GitHub repository, select **Add file → Upload files**.
-3. Upload `index.html`, `styles.css`, `script.js` and the `updates` folder with `latest.json`.
-4. Commit to the `main` branch. Cloudflare Pages should automatically redeploy.
+Upload the **contents** of this folder (not the enclosing folder) to the root of the GitHub repository connected to Cloudflare. Replace the old `index.html`, `styles.css`, `script.js`, and `README.md`. Add `features.html` and `guide.html`. Preserve the `updates/latest.json` path.
 
-Cloudflare Pages configuration:
-- Framework preset: None
-- Build command: (blank)
-- Build output directory: / (repository root)
-- Root directory: (blank)
+Cloudflare will redeploy after committing to the production branch.
 
-## Releases and security
+## Release buttons
 
-The download button is intentionally disabled until a verified public installer is published.
-The `/updates/latest.json` manifest is a placeholder; the Windows app must NOT treat
-`status: unreleased` as an available update. Do not insert a fictional version,
-download URL or checksum.
+The Download Free Version and Buy a Licence buttons are intentionally disabled until a real, trusted installer URL and payment URL are configured. Do not publish an unverified URL or a fake checkout. Once ready, change the buttons in index.html to anchor links and provide the actual URLs.
 
-When publishing a release, host the large installer in R2 or another trusted
-HTTPS download host, compute its real SHA-256 checksum, and update the manifest.
-Before wiring automatic execution or installation, implement secure update
-verification and a trustworthy signing process. Initially, open the download
-URL in the browser rather than executing remote files automatically.
+## Theme
 
-No bot source code, credentials, license server secrets or private keys belong
-in this public repository.
+Colors are based on the Voz PySide6 GUI: background #0e1223, panels #191e36, blue buttons #2b4ac3, and text #e9edff.
+
+The updates/latest.json file remains `unreleased`; do not advertise an update until the installer is published and its SHA-256 checksum is calculated.
+
+
+## Logo and background screenshots
+- Header brand on Home, Features, and Guide uses `assets/voz-logo.png` extracted from the supplied `voz.ico`.
+- The favicon is `assets/voz.ico`.
+- The homepage cycles through five supplied screenshots in their exact upload order, every 6.5 seconds.
+- The screenshots are darkened behind a gradient overlay to preserve readability.
+- To change slideshow timing, edit `6500` (milliseconds) in `script.js`.
+- Upload the `assets` directory along with the other site files.
