@@ -64,3 +64,16 @@ body,body.homepage{background:#0e1223}
 .viewer-scroll{height:calc(100% - 54px);overflow:auto;text-align:center;padding:16px}
 .viewer-scroll img{display:block;width:auto;max-width:none;height:auto;margin:0 auto;box-shadow:0 6px 25px #0007}
 @media(max-width:650px){.screenshot-viewer{inset:1vh 1vw;width:98vw;height:98vh}.viewer-toolbar{padding:6px}.viewer-actions button{padding:6px 9px}.viewer-toolbar #viewer-caption{font-size:11px}}
+
+/* Guide section 7 topic separation */
+.guide-extra-topic + .guide-extra-topic { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #34406a; }
+.guide-extra-topic h3 { color: #e9edff; font-size: 1.15rem; margin: 0 0 .8rem; }
+.guide-extra-topic h4 { color: #85b8ff; font-size: 1rem; margin: 1.25rem 0 .5rem; }
+.guide-extra-topic p { color: #a8b2d4; line-height: 1.7; margin: .55rem 0; }
+.guide-extra-topic p strong { color: #e9edff; }
+
+/* Discord commands in Guide section 8 */
+.guide-command-list{display:grid;gap:10px;margin-top:18px}
+.guide-command{display:grid;grid-template-columns:minmax(145px,200px) 1fr;align-items:center;gap:16px;padding:13px 16px;background:#191e36;border:1px solid #34406a;border-radius:9px;color:#a8b2d4}
+.guide-command code{font-size:.94rem;color:#9fc3ff;white-space:nowrap}
+@media(max-width:600px){.guide-command{grid-template-columns:1fr;gap:6px}}

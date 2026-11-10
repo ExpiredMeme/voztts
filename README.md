@@ -14,3 +14,7 @@ Section 3 updated with token, server and connect instructions and a zoomable Voz
 Section 4 updated with LLM Manager folder, Hugging Face download, GGUF import, and bot startup instructions. Three user-supplied screenshots added; all are zoomable via existing guide image viewer. A separate Hugging Face search screenshot was not supplied.
 
 Section 5 updated with four screenshots, using the existing click-to-enlarge viewer.
+
+
+## Guide Section 7 update
+Expanded the final accordion with Web Search and Settings explanations and included the user-supplied DuckDuckGo screenshot. Existing image zoom viewer supports the new screenshot.
