@@ -18,3 +18,6 @@ body,body.homepage{background:#0e1223}
 .features-cta p{margin:0 0 8px;color:var(--muted)}
 .features-cta .notice{margin:0}
 @media(max-width:600px){.features-page .feature-list{grid-template-columns:1fr}.features-page .feature-list article{min-height:0}}
+
+/* Full-width privacy card beneath the eight feature cards. */
+.features-page .feature-list .feature-privacy{grid-column:1 / -1;min-height:0}
