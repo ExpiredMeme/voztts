@@ -18,3 +18,5 @@ Section 5 updated with four screenshots, using the existing click-to-enlarge vie
 
 ## Guide Section 7 update
 Expanded the final accordion with Web Search and Settings explanations and included the user-supplied DuckDuckGo screenshot. Existing image zoom viewer supports the new screenshot.
+
+PayPal checkout: homepage Buy a licence links to https://www.paypal.com/ncp/payment/RSEJRBMRXPRK6. The free installer download remains disabled pending hosting. Automatic licence delivery is not yet implemented; do not take live orders until fulfilment is ready.
