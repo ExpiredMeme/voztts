@@ -109,3 +109,20 @@ a.button:focus-visible {
   outline-offset: 4px;
 }
 
+
+/* Voz refund request page */
+.refund-page{width:min(690px,100%);margin-top:48px}
+.refund-page h1{font-size:clamp(40px,6vw,60px)}
+.refund-form{display:grid;gap:22px;margin:32px 0 20px;padding:28px;background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.refund-field{display:grid;gap:9px}
+.refund-field label{font-size:14px;font-weight:650}
+.refund-field .optional{font-size:12px;color:var(--muted);font-weight:400}
+.refund-field input,.refund-field textarea{width:100%;background:#10172c;color:var(--text);border:1px solid #455276;border-radius:8px;padding:13px 14px;font:inherit;font-size:14px}
+.refund-field textarea{resize:vertical;line-height:1.6}
+.refund-field input:focus-visible,.refund-field textarea:focus-visible{outline:2px solid var(--blue-light);outline-offset:2px}
+.refund-field small,.refund-privacy{color:var(--muted);font-size:12px;line-height:1.7}
+.refund-submit{cursor:pointer;width:fit-content}
+.refund-status{padding:15px;border-radius:8px;background:#202b4b;border:1px solid #465d96;line-height:1.6;font-size:14px;overflow-wrap:anywhere}
+.refund-status[data-kind="error"]{background:#3b2230;border-color:#9e4b68}
+.refund-status[data-kind="success"]{background:#1c3a35;border-color:#4e9986}
+@media(max-width:600px){.refund-form{padding:19px}.refund-submit{width:100%}.refund-page{margin-top:35px}}

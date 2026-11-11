@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1223">
+  <meta name="description" content="Request a refund for a Voz Pro purchase.">
+  <title>Request a refund — Voz</title>
+  <link rel="icon" href="/assets/voz.ico" sizes="any">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="header">
+    <a class="brand" href="/" aria-label="Voz home"><img src="/assets/voz-logo.png" alt="Voz logo" width="52" height="52"></a>
+    <nav aria-label="Main navigation"><a href="/features.html">Features</a><a href="/guide.html">Guide</a><a href="/refund.html" aria-current="page">Refunds</a></nav>
+  </header>
+  <main class="inner refund-page">
+    <div class="overline">VOZ SUPPORT</div>
+    <h1>Request a refund</h1>
+    <p class="intro">Tell us about your Voz Pro purchase. We’ll review your request and may contact you to verify ownership. Submitting this form does not automatically issue a refund or cancel your licence.</p>
+    <form id="refund-form" class="refund-form">
+      <div class="refund-field">
+        <label for="refund-email">PayPal email address <span aria-hidden="true">*</span></label>
+        <input id="refund-email" name="customer_email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com">
+        <small>Use the email address associated with your PayPal purchase.</small>
+      </div>
+      <div class="refund-field">
+        <label for="refund-transaction">PayPal order or transaction ID <span class="optional">(optional)</span></label>
+        <input id="refund-transaction" name="paypal_transaction_id" type="text" maxlength="128" pattern="[A-Za-z0-9-]*" placeholder="PayPal reference">
+        <small>Including this helps us locate the correct purchase.</small>
+      </div>
+      <div class="refund-field">
+        <label for="refund-reason">Reason for your refund request <span aria-hidden="true">*</span></label>
+        <textarea id="refund-reason" name="reason" minlength="10" maxlength="1500" rows="6" required placeholder="Please explain why you're requesting a refund (at least 10 characters)."></textarea>
+      </div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAF9OpFNxQVTce-Tn" data-theme="dark"></div>
+      <button class="button primary refund-submit" id="refund-submit" type="submit">Submit refund request <span class="arrow" aria-hidden="true">→</span></button>
+      <div id="refund-status" class="refund-status" role="status" aria-live="polite" hidden></div>
+    </form>
+    <p class="refund-privacy">We use the information you submit to review your request and identify the relevant purchase. Please don't include passwords, full payment card numbers or licence keys in your explanation.</p>
+    <a class="back" href="/">← Back to Voz</a>
+  </main>
+  <footer><span>© <span id="year"></span> Voz</span><span>Made for Discord voice chats.</span></footer>
+</div>
+<script src="/refund.js?v=1" defer></script>
+</body></html>
