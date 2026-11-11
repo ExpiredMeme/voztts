@@ -1,0 +1,17 @@
+VOZ SANDBOX CHECKOUT - DEPLOYMENT
+
+1. Cloudflare: Edit the voz-license-api Worker, replace code with voz_checkout_worker.txt, deploy.
+   This enables CORS for https://voztts.voztts.workers.dev only on the two Sandbox checkout endpoints.
+2. GitHub: Upload the contents of this ZIP to the repository root, retaining the assets/ and updates/ folders.
+3. Deploy your website at https://voztts.voztts.workers.dev/ (verify that GitHub changes reach the deployed site).
+4. Click Buy Voz Pro — £6.99, approve with PayPal SANDBOX buyer account, and return to the website.
+5. Verify success message, a new D1 fulfilment, and one licence email to RESEND_TEST_EMAIL.
+6. Refresh or repeat capture of the same order to confirm no duplicate email.
+
+IMPORTANT: This is NOT live checkout. Resend onboarding sender only emails your authorised test inbox.
+Your Worker still requires a Sandbox webhook / reconciliation process to complete orders when customers do not return to the website.
+Do not switch to live payments until that is built and tested, and a verified Resend sending domain is configured.
+The previous PayPal payment link is removed from the homepage.
+
+API base currently set in script.js: https://voz-license-api.voztts.workers.dev
+If your actual API hostname differs, update VOZ_API in script.js.

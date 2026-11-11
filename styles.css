@@ -77,3 +77,6 @@ body,body.homepage{background:#0e1223}
 .guide-command{display:grid;grid-template-columns:minmax(145px,200px) 1fr;align-items:center;gap:16px;padding:13px 16px;background:#191e36;border:1px solid #34406a;border-radius:9px;color:#a8b2d4}
 .guide-command code{font-size:.94rem;color:#9fc3ff;white-space:nowrap}
 @media(max-width:600px){.guide-command{grid-template-columns:1fr;gap:6px}}
+
+/* Sandbox checkout status and button interaction */
+button.button{cursor:pointer}button.button:not(:disabled):hover{border-color:#85b8ff;background:#26345c}button.button:focus-visible{outline:2px solid #85b8ff;outline-offset:4px}.checkout-status{max-width:630px;margin-top:20px;padding:14px 18px;background:#191e36;border:1px solid #44517d;border-radius:9px;color:#dce5ff;font-size:14px;line-height:1.6}.checkout-status[hidden]{display:none}.checkout-status[data-kind="success"]{border-color:#4b987d}.checkout-status[data-kind="warning"]{border-color:#ba9656}.checkout-status[data-kind="error"]{border-color:#b65d73}
