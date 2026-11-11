@@ -90,3 +90,22 @@ button.button{cursor:pointer}button.button:not(:disabled):hover{border-color:#85
 .purchase-confirmation .purchase-note{font-size:13px;margin-top:24px}
 .purchase-confirmation .buttons{justify-content:center;margin-top:28px;flex-wrap:wrap}
 @media(max-width:600px){.purchase-confirmation{padding:32px 20px}}
+
+
+/* Download link styling */
+a.button {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+a.button:hover {
+  border-color: #85b8ff;
+  background: #26345c;
+}
+
+a.button:focus-visible {
+  outline: 2px solid #85b8ff;
+  outline-offset: 4px;
+}
+
