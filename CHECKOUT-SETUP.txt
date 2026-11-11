@@ -15,3 +15,6 @@ The previous PayPal payment link is removed from the homepage.
 
 API base currently set in script.js: https://voz-license-api.voztts.workers.dev
 If your actual API hostname differs, update VOZ_API in script.js.
+
+CONFIRMATION PAGE UPDATE
+After the existing backend reports completed=true and email_status=sent, the website redirects to /purchase-success.html. If email delivery is pending/failed or payment cannot be confirmed, the homepage keeps its existing error/status message. Deploy the entire ZIP to the site root. This confirmation is based on Resend API acceptance, not a delivery webhook. Do not enable Live checkout yet.

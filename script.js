@@ -74,7 +74,8 @@ if (buyButton) {
     const result = await checkoutPost('/api/checkout/sandbox/capture-order', { order_id: orderId });
     if (!result.completed) throw new Error('Payment completion could not be confirmed.');
     if (result.email_status === 'sent') {
-      checkoutStatus('Sandbox purchase complete! Your Voz Pro test licence has been emailed to the authorised test inbox. Check your inbox and spam folder.', 'success');
+      window.location.replace('/purchase-success.html');
+      return;
     } else {
       checkoutStatus(`Sandbox payment complete and licence saved, but email delivery is ${result.email_status || 'pending'}. Please contact support with your PayPal order reference: ${orderId}`, 'warning');
     }

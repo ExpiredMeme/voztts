@@ -80,3 +80,13 @@ body,body.homepage{background:#0e1223}
 
 /* Sandbox checkout status and button interaction */
 button.button{cursor:pointer}button.button:not(:disabled):hover{border-color:#85b8ff;background:#26345c}button.button:focus-visible{outline:2px solid #85b8ff;outline-offset:4px}.checkout-status{max-width:630px;margin-top:20px;padding:14px 18px;background:#191e36;border:1px solid #44517d;border-radius:9px;color:#dce5ff;font-size:14px;line-height:1.6}.checkout-status[hidden]{display:none}.checkout-status[data-kind="success"]{border-color:#4b987d}.checkout-status[data-kind="warning"]{border-color:#ba9656}.checkout-status[data-kind="error"]{border-color:#b65d73}
+
+/* Dedicated checkout confirmation */
+.purchase-confirmation{max-width:710px;margin:15px auto 0;padding:42px 36px;text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:18px;box-shadow:0 18px 50px #0002}
+.purchase-confirmation .purchase-check{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 22px;border-radius:50%;background:#173d38;border:2px solid #4b987d;color:#a6f4d0;font-size:36px;font-weight:700}
+.purchase-confirmation h1{font-size:clamp(32px,5vw,50px);letter-spacing:-.04em;margin:12px 0 18px}
+.purchase-confirmation p{color:var(--muted);line-height:1.7;margin:10px auto;max-width:570px}
+.purchase-confirmation .purchase-lead{font-size:18px;color:var(--text)}
+.purchase-confirmation .purchase-note{font-size:13px;margin-top:24px}
+.purchase-confirmation .buttons{justify-content:center;margin-top:28px;flex-wrap:wrap}
+@media(max-width:600px){.purchase-confirmation{padding:32px 20px}}
