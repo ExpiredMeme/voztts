@@ -47,7 +47,7 @@ refundForm?.addEventListener('submit', async event => {
     refundForm.reset();
     window.turnstile?.reset();
     refundForm.querySelectorAll('input, textarea, button').forEach(element => { element.disabled = true; });
-    showRefundStatus(`Your refund request has been received. Reference: ${data.reference}. Please keep this number for your records. We'll review your request.`, 'success');
+    showRefundStatus(`Request received. Reference: ${data.reference}. ${data.message || 'Please keep this number for your records.'}`, 'success');
   } catch (error) {
     showRefundStatus(error instanceof TypeError
       ? 'Unable to contact the refund service. Please check your connection and try again.'

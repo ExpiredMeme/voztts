@@ -19,7 +19,7 @@
   <main class="inner refund-page">
     <div class="overline">VOZ SUPPORT</div>
     <h1>Request a refund</h1>
-    <p class="intro">Tell us about your Voz Pro purchase. We’ll review your request and may contact you to verify ownership. Submitting this form does not automatically issue a refund or cancel your licence.</p>
+    <p class="intro">Tell us about your Voz Pro purchase. For eligible Sandbox purchases within 14 days, we send a verification link to the configured Sandbox test inbox. Once verified, the refund and licence revocation can happen automatically. Other requests require manual review.</p>
     <form id="refund-form" class="refund-form">
       <div class="refund-field">
         <label for="refund-email">PayPal email address <span aria-hidden="true">*</span></label>
@@ -27,9 +27,9 @@
         <small>Use the email address associated with your PayPal purchase.</small>
       </div>
       <div class="refund-field">
-        <label for="refund-transaction">PayPal order or transaction ID <span class="optional">(optional)</span></label>
-        <input id="refund-transaction" name="paypal_transaction_id" type="text" maxlength="128" pattern="[A-Za-z0-9-]*" placeholder="PayPal reference">
-        <small>Including this helps us locate the correct purchase.</small>
+        <label for="refund-transaction">PayPal order or capture ID <span aria-hidden="true">*</span></label>
+        <input id="refund-transaction" name="paypal_transaction_id" type="text" maxlength="128" pattern="[A-Za-z0-9-]+" required placeholder="PayPal reference">
+        <small>Required for automatic matching; use the PayPal order ID or capture ID.</small>
       </div>
       <div class="refund-field">
         <label for="refund-reason">Reason for your refund request <span aria-hidden="true">*</span></label>
@@ -44,5 +44,5 @@
   </main>
   <footer><span>© <span id="year"></span> Voz</span><span>Made for Discord voice chats.</span></footer>
 </div>
-<script src="/refund.js?v=1" defer></script>
+<script src="/refund.js?v=2" defer></script>
 </body></html>
