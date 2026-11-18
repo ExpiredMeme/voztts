@@ -1,3 +1,7 @@
+NOTE: 
+Ollama must be running to start the bot. (Installed alongside application).
+This application was tested and working on a 5070ti. Should work on 2000/3000/4000 series, but not tested. Only supports Nvidia cards.
+
 # Features
 ## Realtime voice conversations
 Have conversations with a chatbot that responds instantly to you and your friends in Discord voice channels.
@@ -91,13 +95,71 @@ Select a voice. You can customise the voice of your bot using a voice sample. Ed
 
 ![App Screenshot](assets/voz-voice-library.png)
 
-    Create custom sound effectsUsers with a paid licence can add a sound effect that plays when a particular voice is activated in the menu underneath.
-    Voz Sound Effects per voice panel with Add or Replace WAV button
-    Sound Effects (per voice) — click to enlarge
-    To add the sound effect to an associated voice, use the Discord command "/voice sound". Type the name of the voice you want to have a sound effect, attach the WAV file, and choose whether it plays when the voice is activated, before every reply, or both. Sound effects are saved in a folder called "Sounds".
-    Discord slash command voice sound with voice name, WAV sample upload and when options
-    Discord /voice sound command — click to enlarge
-    Adjust settingsSet your preferred wake word, voice options and personality. In the "Roles and Wake Words" tab you can set each voice to have its own personality. You can set each voice to only respond to you when a certain word is spoken. If the word is not said, it will stay silent. This is helpful if there are many people in a channel talking who may interrupt the bot.Tip: The bot may not pick up certain words if they sound similar to another word, so add multiple wake words. For example, if you want your bot to only respond to "Joe", add "John" as well, as it may mistake the words for one another. To add multiple wake words simply write "Joe, John, Jerry" without the quotation marks.You can additionally set different voices and wake words per server, but you will need your Discord server ID.
-    Voz Roles and Wake Words tab showing per-voice personality, global wake word defaults and per-server wake overrides
-    Roles and Wake Words — click to enlarge
+Create custom sound effects. Users with a paid licence can add a sound effect that plays when a particular voice is activated in the menu underneath.
 
+![App Screenshot](assets/voz-voice-sound-effects.png)
+
+To add the sound effect to an associated voice, use the Discord command "/voice sound". Type the name of the voice you want to have a sound effect, attach the WAV file, and choose whether it plays when the voice is activated, before every reply, or both. Sound effects are saved in a folder called "Sounds".
+
+![App Screenshot](assets/discord-voice-sound-command.png)
+
+Adjust settings. Set your preferred wake word, voice options and personality. In the "Roles and Wake Words" tab you can set each voice to have its own personality. You can set each voice to only respond to you when a certain word is spoken. If the word is not said, it will stay silent. This is helpful if there are many people in a channel talking who may interrupt the bot. Tip: The bot may not pick up certain words if they sound similar to another word, so add multiple wake words. For example, if you want your bot to only respond to "Joe", add "John" as well, as it may mistake the words for one another. To add multiple wake words simply write "Joe, John, Jerry" without the quotation marks.You can additionally set different voices and wake words per server, but you will need your Discord server ID.
+
+![App Screenshot](assets/voz-roles-wake-words.png)
+
+## 06 Start chatting
+
+Join a Discord voice channel with your friends.
+Connect the bot. Use the Voz GUI or your configured Discord commands to have the bot join the channel.
+Use your configured wake word and talk to the chatbot. You can refine its settings from the GUI.
+
+## 07 Extra information, general tips and help
+
+You can install DuckDuck. Enable web search to have your bot attempt to search the internet when asked questions, but note this is experimental. A number of LLMs struggle with calling the web search tool and can give wrong information or not find results at all. It may be best to leave this disabled and let the LLM rely on its own tools and information.
+
+![App Screenshot](assets/voz-duckduckgo-web-search.png)
+
+## Settings
+
+Each setting gives a brief explanation of what it does if you hover over the field, but let's run through some of them here.
+
+## Ollama
+
+Max Tokens is the maximum number of tokens generated for a reply. Higher numbers will generate slower responses. Adjust this based on what you are comfortable with.
+
+Max History is the number of messages the LLM will keep in memory when generating responses. Again, higher = slower responses.
+
+## Speech Recognition
+
+Silence End is how long the bot waits for silence before it starts generating a response. Lower = quicker response, but it may cut off some of your words and cause a less accurate response.
+Chatterbox
+
+Chatterbox Model is the TTS engine used to generate responses. Standard is the default. Turbo is quicker, but potentially generates less accurate voice clones.
+
+Chatterbox CFG adjusts the pacing of the TTS. Lower may follow the voice sample more accurately.
+
+Chatterbox Exaggeration adjusts the emotion of the voice generation. Higher = more expressive.
+
+Chatterbox Temperature adjusts the randomness of the response. Lower = less random, more stable.
+
+TTS max chars adjusts how large a generated response can be. Higher = longer response times.
+
+## Extra Bits
+
+The default system prompt might be too friendly and conversational, leading to it repeating itself or asking a question at the end of every sentence to keep the conversation going. Try to fix this by giving it a different personality prompt, either in Settings or in the custom voice list. Set this to whatever you want, but try to be specific about the behaviour you want.
+
+Qwen3 4B is a good starting point for an LLM. It offers a balance between speed and decent generated responses.
+
+To generate responses as close to real time as possible, try using Chatterbox in Turbo mode, set Max history between 4–8, and set Silence End between 0.3–0.5 (or as low as you can go without your voice being cut off consistently).
+
+## 08 Controlling the bot through Discord commands
+
+Here is a list of commands available to use by simply typing in a text channel the bot can see.
+/voice add - Add a new voice. Name it and attach a WAV file.
+/voice use - Switch to the selected voice.
+/voice wake - Set a wake word to the selected voice.
+/voice remove - Remove selected voice.
+/voice list - List all available voices.
+/voice sound - Select a voice and add a sound effect.
+/voice sound remove - Remove a sound effect from a voice.
+/voice role - Add a role/personality to a voice.
