@@ -1,3 +1,5 @@
+Voz is a local AI-powered Discord voice bot for Windows, featuring real-time voice conversations with support for custom AI voices.
+
 NOTE: 
 Ollama must be running to start the bot. (Installed alongside application).
 This application was tested and working on a 5070ti. Should work on 2000/3000/4000 series, but not tested. Only supports Nvidia cards.
