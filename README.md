@@ -30,7 +30,7 @@ Configure how and when Voz responds in your server.
 Let Voz search the web for information when needed.
 
 ## Privacy
-Installed and ran locally on your PC. Your conversations are between you and your local chatbot. Nothing is saved, no one other than whoever is in your Discord call has access to conversations.
+Installed and ran locally on your PC. Your conversations are between you and your discord call. Nothing is saved.
 
 # Guide
 
