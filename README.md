@@ -157,11 +157,19 @@ To generate responses as close to real time as possible, try using Chatterbox in
 ## 08 Controlling the bot through Discord commands
 
 Here is a list of commands available to use by simply typing in a text channel the bot can see.
+
 /voice add - Add a new voice. Name it and attach a WAV file.
+
 /voice use - Switch to the selected voice.
+
 /voice wake - Set a wake word to the selected voice.
+
 /voice remove - Remove selected voice.
+
 /voice list - List all available voices.
+
 /voice sound - Select a voice and add a sound effect.
+
 /voice sound remove - Remove a sound effect from a voice.
+
 /voice role - Add a role/personality to a voice.
